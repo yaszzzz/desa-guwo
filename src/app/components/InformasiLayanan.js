@@ -7,22 +7,17 @@ const konten = {
   Pendidikan: {
     title: "Pendidikan",
     desc: "Akses pendidikan dasar hingga menengah yang tersedia di desa.",
-    links: ["TK/PAUD", "SD Negeri", "SMP Terdekat"],
+    links: ["SD Negeri", "SMP Terdekat"],
   },
   Kesehatan: {
     title: "Kesehatan",
     desc: "Layanan kesehatan untuk warga desa.",
-    links: ["Puskesmas", "Posyandu", "Klinik Desa"],
+    links: ["Puskesmas terdekat", "Posyandu"],
   },
   Keagamaan: {
     title: "Keagamaan",
     desc: "Sarana ibadah dan kegiatan keagamaan di desa.",
     links: ["Masjid/Mushola", "Gereja", "Kegiatan Keagamaan"],
-  },
-  "Budaya & Adat": {
-    title: "Budaya & Adat",
-    desc: "Informasi tradisi, budaya lokal, dan upacara adat.",
-    links: ["Upacara Adat", "Kesenian Lokal", "Pakaian Adat"],
   },
   "Administrasi Surat": {
     title: "Administrasi Surat",
@@ -37,7 +32,7 @@ const konten = {
   "Pengaduan Warga": {
     title: "Pengaduan Warga",
     desc: "Warga dapat menyampaikan keluhan atau saran kepada perangkat desa.",
-    links: ["Formulir Pengaduan", "Kontak Perangkat Desa"],
+    links: ["Kontak Perangkat Desa"],
   },
   "Bantuan Sosial": {
     title: "Bantuan Sosial",
@@ -47,17 +42,17 @@ const konten = {
   UMKM: {
     title: "UMKM",
     desc: "Produk dan pelaku UMKM di desa.",
-    links: ["Kerajinan Tangan", "Makanan Lokal", "Daftar UMKM"],
+    links: ["Kerajinan Tangan","Daftar UMKM"],
   },
   Pertanian: {
     title: "Pertanian",
     desc: "Potensi hasil pertanian dan perkebunan desa.",
-    links: ["Padi", "Palawija", "Perkebunan Kopi"],
+    links: ["Jagung", "Perkebunan Kopi"],
   },
 };
 
 const menu = {
-  "Fasilitas Umum": ["Pendidikan", "Kesehatan", "Keagamaan", "Budaya & Adat"],
+  "Fasilitas Umum": ["Pendidikan", "Kesehatan", "Keagamaan"],
   "Layanan Balai Desa": [
     "Administrasi Surat",
     "Layanan Kependudukan",
