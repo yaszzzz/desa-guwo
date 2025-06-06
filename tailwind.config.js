@@ -8,4 +8,12 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  colors: {
+  desa: {
+    dark: '#111827', 
+    gray: '#1f2937',
+    gold: '#facc15',
+  },
+}
+
 }

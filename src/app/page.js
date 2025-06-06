@@ -3,8 +3,9 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import ProfilDesa from "./components/ProfilDesa";
-import KontakLokasi from "./components/KontakLokasi";
 import BeritaKegiatan from "./components/BeritaKegiatan";
+import LetakPage from "./page/letak/page";
+import InformasiLayanan from "./components/InformasiLayanan";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Hero />
       <ProfilDesa />
       <Services />
+      <InformasiLayanan />
+      <LetakPage />
       <BeritaKegiatan />
-      <KontakLokasi />
       <Footer />
     </>
   );

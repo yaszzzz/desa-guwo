@@ -1,55 +1,36 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-
-const images = [
-  "/assets/images/bandung.jpg",
-  "/assets/images/medan.jpg",
-  "/assets/images/surabaya.jpeg",
-];
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[90vh] flex items-center justify-center text-white overflow-hidden">
-      <div
-        className="absolute inset-0 bg-center bg-cover transition-all duration-1000"
-        style={{ backgroundImage: `url(${images[current]})` }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
+    <header className="relative h-screen text-white pt-24 overflow-hidden">
+      <img
+        src="/assets/images/bandung.jpg"
+        alt="Desa Guwo"
+        className="absolute inset-0 w-full h-full object-cover  brightness-[0.3] z-0"
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 text-center px-4 sm:px-6 md:px-10 max-w-4xl"
+        transition={{ duration: 1 }}
+        className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6"
       >
-        <h1 className="text-xl sm:text-3xl md:text-5xl font-extrabold leading-snug mb-4">
-          Desa Guwo, <span className="text-desa.gold">Lebih Terbuka</span> dan
-          Informatif
+        <h1 className="text-4xl md:text-6xl font-bold font- mb-4 drop-shadow-lg">
+          Desa Guwo, Harmoni Alam & Budaya
         </h1>
-        <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto mb-6">
-          Website resmi Desa Guwo sebagai sumber informasi publik untuk warga
-          desa kecil di Kabupaten Boyolali.
+        <p className="text-lg md:text-xl mb-8 max-w-2xl text-gray-200 drop-shadow">
+          Menyambut masa depan dengan semangat kebersamaan, menjaga kearifan lokal, dan membuka diri terhadap perubahan.
         </p>
-
-        <a
-          href="#layanan"
-          className="inline-block bg-desa.gold text-white font-semibold px-4 py-2 sm:px-6 sm:py-3 rounded shadow hover:bg-yellow-500 transition text-sm sm:text-base outline-2"
+        <Link
+          href="#profil-desa"
+          className="bg-desa.gold text- px-6 py-3 rounded-full font-semibold shadow hover:dark:bg-yellow-800 transition outline-2 "
         >
-          Lihat Informasi
-        </a>
+          Lihat Informasi Desa
+        </Link>
       </motion.div>
-    </section>
-  );
+    </header>
+  )
 }

@@ -51,7 +51,7 @@ export default function KontakLokasi() {
           className="rounded-xl overflow-hidden shadow-xl"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.3496!2d110.7281!3d-7.4311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a6e11aa8e91d3%3A0xf27e1e0b9ff8d2c1!2sDesa%20Guwo%2C%20Boyolali!5e0!3m2!1sen!2sid!4v1700000000000"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4009.2497704080897!2d110.71229269286728!3d-7.273009522950626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70a1f2caeeb26d%3A0x5395389f3b8b9308!2sBalai%20Desa%20Guwo!5e1!3m2!1sid!2sid!4v1749047410397!5m2!1sid!2sid"
             width="100%"
             height="350"
             style={{ border: 0 }}
