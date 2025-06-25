@@ -29,10 +29,10 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center">
-            <NavItem href="/" label="Beranda" />
-            <NavItem href="#profil" label="Profil" />
-            <NavItem href="#layanan" label="Layanan" />
-            <NavItem href="#kontak" label="Kontak" />
+            <NavItem href="/#" label="Beranda" />
+            <NavItem href="/#profil" label="Profil" />
+            <NavItem href="/#layanan" label="Layanan" />
+            <NavItem href="/#kontak" label="Kontak" />
            
           </nav>
 
@@ -49,10 +49,10 @@ export default function Navbar() {
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden bg-white/90 dark:bg-black/90 px-6 py-4 space-y-3 text-center">
-          <NavItem href="/" label="Beranda" onClick={toggleMenu} />
-          <NavItem href="#profil" label="Profil" onClick={toggleMenu} />
-          <NavItem href="#layanan" label="Layanan" onClick={toggleMenu} />
-          <NavItem href="#kontak" label="Kontak" onClick={toggleMenu} />
+          <NavItem href="/#" label="Beranda" onClick={toggleMenu} />
+          <NavItem href="/#" label="Profil" onClick={toggleMenu} />
+          <NavItem href="/#layanan" label="Layanan" onClick={toggleMenu} />
+          <NavItem href="/#kontak" label="Kontak" onClick={toggleMenu} />
         
         </div>
       )}

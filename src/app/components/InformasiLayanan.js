@@ -42,7 +42,7 @@ const konten = {
   UMKM: {
     title: "UMKM",
     desc: "Produk dan pelaku UMKM di desa.",
-    links: ["Kerajinan Tangan","Daftar UMKM"],
+    links: ["Kerajinan Tangan", "Daftar UMKM"],
   },
   Pertanian: {
     title: "Pertanian",
@@ -145,7 +145,11 @@ export default function InformasiLayanan() {
                   {konten[subAktif].links.map((link) => (
                     <li key={link}>
                       <a
-                        href="#"
+                        href={`/informasi/${kategoriAktif
+                          .toLowerCase()
+                          .replace(/ /g, "-")}/${link
+                          .toLowerCase()
+                          .replace(/ /g, "-")}`}
                         className="text-white hover:text-desa.gold hover:underline transition duration-200"
                       >
                         {link}
