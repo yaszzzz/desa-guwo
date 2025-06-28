@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
@@ -31,13 +31,13 @@ const lokasiData = [
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
     gambar: '/assets/images/medan.jpg'
   },
-   {
+  {
     nama: 'Dusun Kalitulang (Klampok)',
     koordinat: [-7.273175, 110.714505],
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
     gambar: '/assets/images/medan.jpg'
   },
-   {
+  {
     nama: 'Dusun Kalitulang (Kalitulang)',
     koordinat: [-7.285139, 110.714047],
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
@@ -55,35 +55,44 @@ export default function LetakPage() {
   const [selected, setSelected] = useState(lokasiData[0])
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
+    <section className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
       
       {/* Sidebar */}
-      <div className="space-y-3">
-        <h2 className="text-3xl font-semibold ">Lokasi Strategis</h2>    
+      <aside className="space-y-3 order-1 md:order-none">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-2">Lokasi Strategis</h2>    
         {lokasiData.map((lokasi, index) => (
           <button
             key={index}
-            className={`w-full text-left p-3 rounded border hover:bg-yellow-100 dark:hover:bg-yellow-900 ${
-              selected.nama === lokasi.nama ? 'bg-yellow-100 dark:bg-yellow-800' : ''
-            }`}
+            className={`w-full text-left p-3 rounded border transition
+              ${
+                selected.nama === lokasi.nama
+                  ? 'bg-yellow-100 dark:bg-yellow-800 font-bold'
+                  : 'hover:bg-yellow-100 dark:hover:bg-yellow-900'
+              }`}
             onClick={() => setSelected(lokasi)}
           >
             {lokasi.nama}
           </button>
         ))}
-      </div>
+      </aside>
 
-      {/* Peta */}
-      <div className="h-80 md:col-span-1 rounded overflow-hidden shadow">
+      {/* Map */}
+      <div className="h-60 sm:h-80 md:h-96 rounded overflow-hidden shadow order-3 md:order-none">
         <Map posisi={selected.koordinat} />
       </div>
 
       {/* Panel Info */}
-      <div className="space-y-3">
-        <img src={selected.gambar} alt={selected.nama} className="rounded shadow w-full" />
+      <article className="space-y-3 order-2 md:order-none">
+        <Image
+          src={selected.gambar}
+          alt={selected.nama}
+          width={600}
+          height={400}
+          className="rounded shadow w-full h-auto"
+        />
         <h3 className="text-lg font-semibold">{selected.nama}</h3>
         <p className="text-gray-700 dark:text-gray-300">{selected.deskripsi}</p>
-      </div>
-    </div>
+      </article>
+    </section>
   )
 }
