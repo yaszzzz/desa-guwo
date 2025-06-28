@@ -17,7 +17,7 @@ const konten = {
   Keagamaan: {
     title: "Keagamaan",
     desc: "Sarana ibadah dan kegiatan keagamaan di desa.",
-    links: ["Masjid/Mushola", "Gereja", "Kegiatan Keagamaan"],
+    links: ["Masjid/Mushola", "Kegiatan Keagamaan"],
   },
   "Administrasi Surat": {
     title: "Administrasi Surat",

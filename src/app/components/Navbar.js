@@ -1,30 +1,36 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [darkMode, setDarkMode] = useState(true)
+  const [isOpen, setIsOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
-  const toggleMenu = () => setIsOpen(!isOpen)
-  
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
     }
-  }, [darkMode])
+  }, [darkMode]);
 
   return (
     <header className="w-full fixed top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <span className="text-xl font-bold text-gray-900 dark:text-white">Desa Guwo</span>
+            <img
+              src="/logo.png"
+              alt="Logo Desa Guwo"
+              className="h-8 w-7"
+            />
+            <span className="text-xl font-bold text-gray-900 dark:text-white">
+              Desa Guwo
+            </span>
           </div>
 
           {/* Desktop Nav */}
@@ -33,7 +39,6 @@ export default function Navbar() {
             <NavItem href="/#profil" label="Profil" />
             <NavItem href="/#layanan" label="Layanan" />
             <NavItem href="/#kontak" label="Kontak" />
-           
           </nav>
 
           {/* Mobile toggle button */}
@@ -53,11 +58,10 @@ export default function Navbar() {
           <NavItem href="/#" label="Profil" onClick={toggleMenu} />
           <NavItem href="/#layanan" label="Layanan" onClick={toggleMenu} />
           <NavItem href="/#kontak" label="Kontak" onClick={toggleMenu} />
-        
         </div>
       )}
     </header>
-  )
+  );
 }
 
 function NavItem({ href, label, onClick }) {
@@ -70,5 +74,5 @@ function NavItem({ href, label, onClick }) {
       <span>{label}</span>
       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
     </Link>
-  )
+  );
 }

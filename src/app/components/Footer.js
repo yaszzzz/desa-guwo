@@ -30,13 +30,14 @@ export default function Footer() {
         </div>
 
         {/* Logo Tengah */}
-        <div className="flex justify-center md:justify-center">
-          <img
-            src="/logo-desa.png"
-            alt="Logo Desa Guwo"
-            className="h-12 sm:h-14 object-contain"
-          />
-        </div>
+       <div className="flex justify-center md:justify-end items-center my-6">
+  <img
+    src="/logo2.png"
+    alt="Logo Desa Guwo"
+    className="w-52 h-auto object-contain"
+  />
+</div>
+
 
         {/* Social Media */}
         <div className="space-y-3">

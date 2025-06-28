@@ -14,14 +14,32 @@ const lokasiData = [
     gambar: '/assets/images/medan.jpg'
   },
   {
-    nama: 'Dusun Bodeh',
+    nama: 'Dusun Bodeh (Bodeh)',
     koordinat: [-7.263169745935812, 110.71849341155082],
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
     gambar: '/assets/images/medan.jpg'
   },
   {
-    nama: 'Dusun Jatiri',
+    nama: 'Dusun Bodeh (Rempelas)',
+    koordinat: [-7.262382, 110.724088],
+    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    gambar: '/assets/images/medan.jpg'
+  },
+  {
+    nama: 'Dusun Kalitulang (Jatiri)',
     koordinat: [-7.269384664939981, 110.71507362627148],
+    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    gambar: '/assets/images/medan.jpg'
+  },
+   {
+    nama: 'Dusun Kalitulang (Klampok)',
+    koordinat: [-7.273175, 110.714505],
+    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    gambar: '/assets/images/medan.jpg'
+  },
+   {
+    nama: 'Dusun Kalitulang (Kalitulang)',
+    koordinat: [-7.285139, 110.714047],
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
     gambar: '/assets/images/medan.jpg'
   },

@@ -7,6 +7,7 @@ import ProfilDesa from './components/ProfilDesa'
 import BeritaKegiatan from './components/BeritaKegiatan'
 import LetakPage from './page/letak/page'
 import InformasiLayanan from './components/InformasiLayanan'
+import StatistikKependudukan from './components/StatistikKependudukan'
 
 // Scroll ke hash (misal #layanan) saat load
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
       {/* Tambahkan id untuk scroll target */}
       <section id="profil">
         <ProfilDesa />
+      </section>
+      <section id="Statistik">
+        <StatistikKependudukan />
       </section>
 
       <section>
