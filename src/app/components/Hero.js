@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <header className="relative h-screen text-white pt-24 overflow-hidden">
       <img
-        src="/assets/images/bandung.jpg"
+        src="/assets/photos/membuat lapangan/WhatsApp Image 2025-06-29 at 22.10.42_4a490a4a.jpg"
         alt="Desa Guwo"
         className="absolute inset-0 w-full h-full object-cover  brightness-[0.3] z-0"
       />

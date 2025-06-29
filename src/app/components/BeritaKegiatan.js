@@ -10,7 +10,7 @@ const kegiatan = [
   {
     slug: 'kerja-bakti',
     title: 'Kerja Bakti Membersihkan Lingkungan',
-    img: '/assets/berita/kerja-bakti.jpg',
+    img: '/assets/photos/membersihkan lapangan/WhatsApp Image 2025-06-29 at 22.12.33_e24d663a.jpg',
     desc: 'Warga Desa Guwo bergotong-royong membersihkan selokan dan fasilitas umum sebagai persiapan musim hujan.',
     date: 'Mei 2025',
   },

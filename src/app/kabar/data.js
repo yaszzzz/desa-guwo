@@ -3,7 +3,7 @@ const kabarList = [
   {
     slug: "gotong-royong-perbaikan-jalan",
     title: "Gotong Royong Perbaikan Jalan Dusun",
-    image: "/images/kabar1.jpg",
+    image: "/assets/photos/membuat lapangan/WhatsApp Image 2025-06-29 at 22.10.42_4a490a4a.jpg",
     date: "15 Juni 2025",
     summary: "Warga Desa Guwo melaksanakan kerja bakti memperbaiki jalan yang rusak akibat musim hujan.",
     content: "Warga Desa Guwo bersama-sama melakukan gotong royong memperbaiki jalan yang rusak akibat musim hujan. Kegiatan ini dilakukan agar akses antar dusun tetap lancar dan aman bagi pengguna jalan."

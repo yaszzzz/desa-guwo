@@ -29,7 +29,7 @@ const lokasiData = [
     nama: 'Dusun Kalitulang (Jatiri)',
     koordinat: [-7.269384664939981, 110.71507362627148],
     deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
-    gambar: '/assets/images/medan.jpg'
+    gambar: '/assets/photos/letak/jatiri.jpg'
   },
   {
     nama: 'Dusun Kalitulang (Klampok)',
