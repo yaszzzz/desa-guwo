@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState, useEffect } from "react"
 import {
@@ -8,16 +8,14 @@ import {
 } from "recharts"
 
 export default function StatistikKependudukan() {
-
-  // gunakan window.innerWidth supaya tinggi chart adaptif
   const [chartHeight, setChartHeight] = useState(300)
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setChartHeight(250)  // mobile
+        setChartHeight(250)
       } else {
-        setChartHeight(400)  // desktop
+        setChartHeight(400)
       }
     }
     handleResize()
@@ -25,27 +23,39 @@ export default function StatistikKependudukan() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  // data tetap seperti sumber asli
+  const totalPenduduk = 3442
+  const totalPria = 1715
+  const totalWanita = 1727
+  const propPria = totalPria / totalPenduduk
+  const propWanita = totalWanita / totalPenduduk
+
   const jenisKelamin = [
-    { name: "Pria", value: 1748 },
-    { name: "Wanita", value: 1775 },
+    { name: "Pria", value: 1715 },
+    { name: "Wanita", value: 1727 },
   ]
 
   const kepemilikanKK = [
-    { name: "Kepemilikan KK Pria", value: 1270 },
-    { name: "Kepemilikan KK Wanita", value: 1240 },
-    { name: "Kepala Keluarga Pria", value: 600 },
-    { name: "Kepala Keluarga Wanita", value: 400 },
+    { name: "Jumlah Kepala Keluarga", value: 1151 },
+    { name: "Kepemilikan KK Pria", value: 700 },
+    { name: "Kepemilikan KK Wanita", value: 451 },
   ]
 
-  const usia = [
-    { umur: "0-4", pria: 50, wanita: 48 },
-    { umur: "5-9", pria: 70, wanita: 65 },
-    { umur: "10-14", pria: 100, wanita: 90 },
-    { umur: "15-19", pria: 120, wanita: 110 },
-    { umur: "20-24", pria: 150, wanita: 140 },
-    // dst sesuai data kamu
+  const usiaTotal = [
+    { umur: "0-4", total: 113 },
+    { umur: "5-9", total: 265 },
+    { umur: "10-14", total: 281 },
+    { umur: "15-19", total: 279 },
+    { umur: "20-27", total: 425 },
+    { umur: "28-35", total: 413 },
+    { umur: "36-45", total: 519 },
+    { umur: "45+", total: 1091 },
   ]
+
+  const usia = usiaTotal.map(({ umur, total }) => ({
+    umur,
+    pria: Math.round(total * propPria),
+    wanita: Math.round(total * propWanita),
+  }))
 
   const pendidikan = [
     { tingkat: "Tidak Sekolah", pria: 64, wanita: 50 },
@@ -55,7 +65,7 @@ export default function StatistikKependudukan() {
     { tingkat: "SLTA", pria: 170, wanita: 85 },
     { tingkat: "D1/D2", pria: 6, wanita: 2 },
     { tingkat: "S1", pria: 11, wanita: 6 },
-    { tingkat: "S2", pria: 0, wanita: 0 }
+    { tingkat: "S2", pria: 0, wanita: 0 },
   ]
 
   const colors = ["#3b82f6", "#ec4899"]
@@ -86,7 +96,7 @@ export default function StatistikKependudukan() {
 
           {/* Bar KK */}
           <div className="bg-desa.gray rounded-xl p-4 shadow-lg">
-            <h3 className="text-desa.gold text-center mb-4">Kepemilikan KK</h3>
+            <h3 className="text-desa.gold text-center mb-4">Kepemilikan Kartu Keluarga</h3>
             <ResponsiveContainer width="100%" height={chartHeight}>
               <BarChart data={kepemilikanKK}>
                 <XAxis dataKey="name" tick={{ fontSize: 10 }} />

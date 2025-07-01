@@ -12,31 +12,31 @@ const konten = {
   Kesehatan: {
     title: "Kesehatan",
     desc: "Layanan kesehatan untuk warga desa.",
-    links: ["Puskesmas terdekat", "Posyandu"],
+    links: ["Puskesmas Terdekat", "Posyandu"],
   },
   Keagamaan: {
     title: "Keagamaan",
     desc: "Sarana ibadah dan kegiatan keagamaan di desa.",
-    links: ["Masjid/Mushola", "Kegiatan Keagamaan"],
+    links: ["Masjid / Mushola", "Kegiatan Keagamaan"],
   },
   "Administrasi Surat": {
     title: "Administrasi Surat",
-    desc: "Pengurusan berbagai jenis surat yang dilakukan di balai desa.",
+    desc: "Pengurusan berbagai jenis surat di balai desa.",
     links: ["Surat Domisili", "Surat Keterangan Usaha", "Surat Tidak Mampu"],
   },
   "Layanan Kependudukan": {
     title: "Layanan Kependudukan",
-    desc: "Pelayanan data kependudukan yang tersedia di balai desa.",
-    links: ["KTP", "KK", "Akta Kelahiran"],
+    desc: "Pelayanan dokumen kependudukan warga.",
+    links: ["Pelayanan KTP", "Pelayanan KK", "Akta Kelahiran"],
   },
   "Pengaduan Warga": {
     title: "Pengaduan Warga",
-    desc: "Warga dapat menyampaikan keluhan atau saran kepada perangkat desa.",
+    desc: "Sarana menyampaikan aspirasi atau keluhan.",
     links: ["Kontak Perangkat Desa"],
   },
   "Bantuan Sosial": {
     title: "Bantuan Sosial",
-    desc: "Informasi bantuan sosial yang dapat diakses melalui balai desa.",
+    desc: "Bantuan sosial yang tersedia untuk warga.",
     links: ["BLT Dana Desa", "PKH", "Bantuan Pangan"],
   },
   UMKM: {
@@ -142,20 +142,26 @@ export default function InformasiLayanan() {
                 </h3>
                 <p className="text-gray-300 mb-4">{konten[subAktif].desc}</p>
                 <ul className="list-disc list-inside space-y-2">
-                  {konten[subAktif].links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href={`/informasi/${kategoriAktif
-                          .toLowerCase()
-                          .replace(/ /g, "-")}/${link
-                          .toLowerCase()
-                          .replace(/ /g, "-")}`}
-                        className="text-white hover:text-desa.gold hover:underline transition duration-200"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
+                  {konten[subAktif].links.map((link) => {
+                    // sinkron dengan slug di data.js
+                    const kategoriSlug = Object.keys(menu).find((key) =>
+                      menu[key].includes(subAktif)
+                    )?.toLowerCase().replace(/\s+/g, "-");
+
+                    const layananSlug = subAktif.toLowerCase().replace(/\s+/g, "-");
+                    const subSlug = link.toLowerCase().replace(/\s+/g, "-");
+
+                    return (
+                      <li key={link}>
+                        <a
+                          href={`/informasi/${kategoriSlug}/${layananSlug}/${subSlug}`}
+                          className="text-white hover:text-desa.gold hover:underline transition duration-200"
+                        >
+                          {link}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </>
             ) : (
