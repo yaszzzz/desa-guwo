@@ -1,37 +1,38 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const kegiatan = [
   {
-    slug: 'kerja-bakti',
-    title: 'Kerja Bakti Membersihkan Lingkungan',
-    img: '/assets/photos/membersihkan lapangan/WhatsApp Image 2025-06-29 at 22.12.33_e24d663a.jpg',
-    desc: 'Warga Desa Guwo bergotong-royong membersihkan selokan dan fasilitas umum sebagai persiapan musim hujan.',
-    date: 'Mei 2025',
+    slug: "kerja-bakti",
+    title:
+      "Kerja Bakti Bersama Mahasiswa KKNT UDB Membersihkan Lapangan Voli Dukuh Jatiri",
+    img:  '/assets/photos/membersihkan lapangan/WhatsApp Image 2025-06-29 at 22.12.33_e24d663a.jpg',
+    desc: "Mahasiswa KKNT Universitas Duta Bangsa Surakarta dan warga Dukuh Jatiri bergotong royong membersihkan lapangan voli terbengkalai agar dapat difungsikan kembali untuk kegiatan olahraga masyarakat.",
+    date: "15 Juni 2025",
   },
   {
-     slug: 'posyandu-balita',
-    title: 'Posyandu Balita Dusun Tengah',
-    img: '/assets/berita/posyandu.jpg',
-    desc: 'Kegiatan posyandu rutin kembali digelar di balai dusun, melibatkan kader kesehatan dan ibu-ibu balita.',
-    date: 'April 2025',
+    slug: "posyandu-balita",
+    title: "Posyandu Balita Dusun Tengah",
+    img: "/assets/berita/posyandu.jpg",
+    desc: "Kegiatan posyandu rutin kembali digelar di balai dusun, melibatkan kader kesehatan dan ibu-ibu balita.",
+    date: "April 2025",
   },
   {
-    slug: 'lomba-17an',
-    title: 'Lomba 17 Agustus & Pentas Seni',
-    img: '/assets/berita/lomba.jpg',
-    desc: 'Warga desa antusias mengikuti lomba agustusan dan pertunjukan seni anak-anak di lapangan desa.',
-    date: 'Agustus 2024',
+    slug: "lomba-17an",
+    title: "Lomba 17 Agustus & Pentas Seni",
+    img: "/assets/berita/lomba.jpg",
+    desc: "Warga desa antusias mengikuti lomba agustusan dan pertunjukan seni anak-anak di lapangan desa.",
+    date: "Agustus 2024",
   },
-]
+];
 
 export default function BeritaKegiatan() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
@@ -40,24 +41,26 @@ export default function BeritaKegiatan() {
       spacing: 16,
     },
     breakpoints: {
-      '(min-width: 768px)': {
+      "(min-width: 768px)": {
         slides: { perView: 2, spacing: 24 },
       },
-      '(min-width: 1024px)': {
+      "(min-width: 1024px)": {
         slides: { perView: 3, spacing: 24 },
       },
     },
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+      setCurrentSlide(slider.track.details.rel);
     },
-  })
+  });
 
   return (
     <section id="berita" className="bg-desa.dark text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-desa.gold mb-12">Berita & Kegiatan</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-desa.gold mb-12">
+          Berita & Kegiatan
+        </h2>
 
-         <div ref={sliderRef} className="keen-slider mb-8">
+        <div ref={sliderRef} className="keen-slider mb-8">
           {kegiatan.map((item, i) => (
             <motion.div
               key={i}
@@ -74,7 +77,9 @@ export default function BeritaKegiatan() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-5 text-left">
-                  <p className="text-xs text-desa.gold font-medium mb-1">{item.date}</p>
+                  <p className="text-xs text-desa.gold font-medium mb-1">
+                    {item.date}
+                  </p>
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-300">{item.desc}</p>
                 </div>
@@ -89,12 +94,12 @@ export default function BeritaKegiatan() {
               key={idx}
               onClick={() => instanceRef.current?.moveToIdx(idx)}
               className={`w-3 h-3 rounded-full ${
-                currentSlide === idx ? 'bg-desa.gold' : 'bg-gray-500'
+                currentSlide === idx ? "bg-desa.gold" : "bg-gray-500"
               } transition-colors`}
             ></button>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

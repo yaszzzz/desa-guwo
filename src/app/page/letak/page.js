@@ -10,46 +10,47 @@ const lokasiData = [
   {
     nama: 'Kantor Desa',
     koordinat: [-7.272916744794913, 110.7139179779824],
-    deskripsi: 'Tempat pelayanan administrasi dan pusat pemerintahan Desa Guwo.',
-    gambar: '/assets/images/medan.jpg'
+    deskripsi: 'Pusat pelayanan administrasi dan pemerintahan Desa Guwo.',
+    gambar: '/assets/photos/letak/balai-desa.jpg'
   },
   {
     nama: 'Dusun Bodeh (Bodeh)',
     koordinat: [-7.263169745935812, 110.71849341155082],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
-    gambar: '/assets/images/medan.jpg'
+    deskripsi: 'Wilayah permukiman warga dengan aktivitas sosial dan kegiatan sehari-hari masyarakat.',
+    gambar: '/assets/photos/letak/bodeh.jpg'
   },
   {
     nama: 'Dusun Bodeh (Rempelas)',
     koordinat: [-7.262382, 110.724088],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
-    gambar: '/assets/images/medan.jpg'
+    deskripsi: 'Area permukiman penduduk yang mendukung interaksi dan kehidupan bermasyarakat.',
+    gambar: '/assets/photos/letak/rempelas2.jpg'
   },
   {
     nama: 'Dusun Kalitulang (Jatiri)',
     koordinat: [-7.269384664939981, 110.71507362627148],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    deskripsi: 'Wilayah hunian dengan kegiatan gotong royong dan suasana kebersamaan warga.',
     gambar: '/assets/photos/letak/jatiri.jpg'
   },
   {
     nama: 'Dusun Kalitulang (Klampok)',
     koordinat: [-7.273175, 110.714505],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
-    gambar: '/assets/images/medan.jpg'
+    deskripsi: 'Permukiman warga yang aktif dalam kegiatan sosial serta kehidupan sehari-hari.',
+    gambar: '/assets/photos/letak/klampok.jpg'
   },
   {
     nama: 'Dusun Kalitulang (Kalitulang)',
     koordinat: [-7.285139, 110.714047],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    deskripsi: 'Wilayah pemukiman dengan aktivitas masyarakat yang beragam dan interaksi yang erat.',
     gambar: '/assets/images/medan.jpg'
   },
   {
     nama: 'Dusun Guwo',
     koordinat: [-7.282475413309768, 110.70666828044922],
-    deskripsi: 'Tempat berkumpul warga untuk acara sosial dan rapat.',
+    deskripsi: 'Dusun utama di desa dengan suasana permukiman dan kegiatan sosial masyarakat.',
     gambar: '/assets/images/medan.jpg'
   }
-]
+];
+
 
 export default function LetakPage() {
   const [selected, setSelected] = useState(lokasiData[0])

@@ -53,7 +53,7 @@ export default function Hero() {
           Menyambut masa depan dengan semangat kebersamaan, menjaga kearifan lokal, dan membuka diri terhadap perubahan.
         </p>
         <Link
-          href="#profil-desa"
+          href="#profil"
           className="bg-desa.gold px-6 py-3 rounded-full font-semibold shadow hover:dark:bg-yellow-800 transition outline-2"
         >
           Lihat Informasi Desa
