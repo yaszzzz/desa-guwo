@@ -17,7 +17,7 @@ const kegiatan = [
   },
   {
     slug: "posyandu-balita",
-    title: "Posyandu Balita Dusun Tengah",
+    title: "Posyandu Balita Dusun Tengah",  
     img: "/assets/berita/posyandu.jpg",
     desc: "Kegiatan posyandu rutin kembali digelar di balai dusun, melibatkan kader kesehatan dan ibu-ibu balita.",
     date: "April 2025",

@@ -43,21 +43,7 @@ export default function LetakGeografis() {
        
         {/* Artikel */}
         <article className="prose prose-invert prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-300">
-          <p>
-            Desa Guwo terletak di wilayah dataran rendah Kabupaten Boyolali, Provinsi Jawa Tengah. Lokasinya berada di antara beberapa desa tetangga, dengan akses jalan desa yang telah diaspal dan terhubung ke jalan kabupaten.
-          </p>
-
-          <p>
-            Secara administratif, Desa Guwo masuk dalam Kecamatan Banyudono. Desa ini memiliki batas wilayah yang terdiri dari area persawahan, ladang kering, dan beberapa lahan kosong yang belum dimanfaatkan. Iklim tropis dengan curah hujan sedang menjadikan desa ini cocok untuk aktivitas pertanian sepanjang tahun.
-          </p>
-
-          <p>
-            Lokasi geografis Desa Guwo memudahkan akses warga menuju pusat kota Boyolali dengan waktu tempuh sekitar 20–30 menit. Selain itu, letaknya yang relatif dekat dengan fasilitas umum seperti pasar tradisional dan puskesmas menjadikan desa ini cukup strategis meski berskala kecil.
-          </p>
-
-          <p>
-            Potensi geografis ini menjadi salah satu keunggulan desa dalam pengembangan sektor pertanian dan peternakan, serta membuka peluang untuk pengembangan wisata alam dan edukasi berbasis desa.
-          </p>
+          <p> Desa Guwo terletak di dataran rendah Kabupaten Boyolali, Provinsi Jawa Tengah, dan secara administratif masuk wilayah Kecamatan Wonosegoro. Lokasi desa ini cukup strategis karena berada di jalur penghubung Wonosegoro–Kemusu, dengan akses jalan beraspal yang terhubung langsung ke jaringan jalan kabupaten. </p> <p> Wilayah Desa Guwo didominasi lahan persawahan, ladang, serta sebagian lahan kering yang masih berpotensi dikembangkan. Iklim tropis dengan curah hujan sedang mendukung aktivitas pertanian, peternakan, dan perkebunan sepanjang tahun. </p> <p> Letaknya yang berdekatan dengan Pasar Guwo, jalur utama Wonosegoro, serta kawasan Jembatan Kliyo dan Kemusu membuat Desa Guwo mudah dijangkau. Warga dapat mengakses fasilitas umum seperti pasar, puskesmas, dan sekolah menengah kejuruan di pusat Kecamatan Wonosegoro dengan waktu tempuh sekitar 10–20 menit. </p> <p> Potensi geografis tersebut menjadi modal penting bagi Desa Guwo untuk mengembangkan sektor pertanian, peternakan, serta membuka peluang wisata edukasi dan budaya berbasis desa di masa mendatang. </p>
           <br></br>
         </article>
       </div>

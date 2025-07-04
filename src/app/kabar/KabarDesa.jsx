@@ -44,7 +44,7 @@ export default function KabarDesa() {
               className="keen-slider__slide bg-desa.gray rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500"
             >
               <Link href={`/kabar/${item.slug}`}>
-                <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                <img src={item.images} alt={item.title} className="w-full h-48 object-cover" />
                 <div className="p-5">
                   <p className="text-xs text-desa.gold font-medium mb-2">{item.date}</p>
                   <h3 className="text-lg font-semibold mb-2">{item.title}</h3>

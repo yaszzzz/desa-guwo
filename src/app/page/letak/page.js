@@ -41,13 +41,13 @@ const lokasiData = [
     nama: 'Dusun Kalitulang (Kalitulang)',
     koordinat: [-7.285139, 110.714047],
     deskripsi: 'Wilayah pemukiman dengan aktivitas masyarakat yang beragam dan interaksi yang erat.',
-    gambar: '/assets/images/medan.jpg'
+    gambar: '/assets/photos/letak/kalitulang.jpg'
   },
   {
     nama: 'Dusun Guwo',
     koordinat: [-7.282475413309768, 110.70666828044922],
     deskripsi: 'Dusun utama di desa dengan suasana permukiman dan kegiatan sosial masyarakat.',
-    gambar: '/assets/images/medan.jpg'
+    gambar: '/assets/photos/letak/guwo.jpg'
   }
 ];
 
