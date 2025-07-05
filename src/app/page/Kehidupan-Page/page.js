@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const carouselImages = [
-  'https://images.unsplash.com/photo-1618209292156-cbe00bdf8fbc', // sawah
-  'https://images.unsplash.com/photo-1589782180184-6572bc253f16', // UMKM
-  'https://images.unsplash.com/photo-1603645092752-24d53e5c33cc', // peternakan
+  '/assets/photos/potensi/WhatsApp Image 2025-07-05 at 15.53.53_5584af89.jpg', // sawah
+  '/assets/photos/potensi/WhatsApp Image 2025-07-05 at 15.59.42_cce33add.jpg', // UMKM
+  '/assets/photos/letak/bodeh.jpg', // peternakan
 ]
 
 export default function PotensiKehidupan() {

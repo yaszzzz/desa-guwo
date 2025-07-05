@@ -16,7 +16,7 @@ const konten = {
   },
   Keagamaan: {
     title: "Keagamaan",
-    desc: "Sarana ibadah dan kegiatan keagamaan di desa.",
+    desc: "Berbagai kegiatan keagamaan di desa.",
     links: [ "Kegiatan Keagamaan"],
   },
   "Administrasi Surat": {
@@ -37,17 +37,7 @@ const konten = {
   "Bantuan Sosial": {
     title: "Bantuan Sosial",
     desc: "Bantuan sosial yang tersedia untuk warga.",
-    links: ["BLT Dana Desa", "PKH", "Bantuan Pangan"],
-  },
-  UMKM: {
-    title: "UMKM",
-    desc: "Produk dan pelaku UMKM di desa.",
-    links: ["Kerajinan Tangan", "Daftar UMKM"],
-  },
-  Pertanian: {
-    title: "Pertanian",
-    desc: "Potensi hasil pertanian dan perkebunan desa.",
-    links: ["Jagung", "Perkebunan Kopi"],
+    links: ["BLT Dana Desa", "PKH"],
   },
 };
 
@@ -56,10 +46,8 @@ const menu = {
   "Layanan Balai Desa": [
     "Administrasi Surat",
     "Layanan Kependudukan",
-    "Pengaduan Warga",
-    "Bantuan Sosial",
-  ],
-  "Potensi & UMKM": ["UMKM", "Pertanian"],
+    "Pengaduan Warga"
+  ]
 };
 
 export default function InformasiLayanan() {
