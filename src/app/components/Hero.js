@@ -7,7 +7,7 @@ import Link from 'next/link'
 const images = [
   '/assets/photos/hero/foto3.jpg',
   '/assets/photos/hero/foto4.jpg',
-  '/public/assets/photos/letak/bodeh.jpg',
+  '/assets/photos/letak/bodeh.jpg',
   // tambahkan foto lain di sini
 ]
 
