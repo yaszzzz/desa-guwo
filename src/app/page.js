@@ -8,9 +8,12 @@ import BeritaKegiatan from './components/BeritaKegiatan'
 import LetakPage from './page/letak/page'
 import InformasiLayanan from './components/InformasiLayanan'
 import StatistikKependudukan from './components/StatistikKependudukan'
+import Form from './components/checkbox'
 
 // Scroll ke hash (misal #layanan) saat load
 export default function Home() {
+
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const hash = window.location.hash
@@ -27,6 +30,7 @@ export default function Home() {
 
   return (
     <>
+  <Form />
       <Hero />
       
       {/* Tambahkan id untuk scroll target */}
