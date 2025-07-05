@@ -33,6 +33,7 @@ export default function Home() {
       <section id="profil">
         <ProfilDesa />
       </section>
+      
       <section id="Statistik">
         <StatistikKependudukan />
       </section>

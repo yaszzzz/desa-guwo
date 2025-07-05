@@ -16,18 +16,18 @@ const kegiatan = [
     date: "15 Juni 2025",
   },
   {
-    slug: "posyandu-balita",
-    title: "Posyandu Balita Dusun Tengah",  
-    img: "/assets/berita/posyandu.jpg",
-    desc: "Kegiatan posyandu rutin kembali digelar di balai dusun, melibatkan kader kesehatan dan ibu-ibu balita.",
-    date: "April 2025",
+    slug: "posyandu-semua-usia",
+    title: "Posyandu Semua Usia Dusun Guwo",  
+    img: "/assets/photos/posyandu/Screenshot 2025-07-05 140328.png",
+    desc: "Posyandu semua usia digelar di Pos 2 Desa Guwo bersama bidan desa dan mahasiswa KKN UDB 26.",
+    date: "5 Juli 2025",
   },
   {
-    slug: "lomba-17an",
-    title: "Lomba 17 Agustus & Pentas Seni",
-    img: "/assets/berita/lomba.jpg",
-    desc: "Warga desa antusias mengikuti lomba agustusan dan pertunjukan seni anak-anak di lapangan desa.",
-    date: "Agustus 2024",
+    slug: "kurban-idul-adha-2025",
+    title: "Pelaksanaan Kurban Idul Adha di Dusun Bodeh, Desa Guwo",
+    img: "/assets/photos/kurban/Screenshot 2025-07-05 131616.png",
+    desc: "Warga Dusun Bodeh, Desa Guwo, bergotong royong menyembelih 2 sapi dan 2 kambing pada Hari Raya Idul Adha 1446 H.",
+    date: "6 Juni 2025",
   },
 ];
 

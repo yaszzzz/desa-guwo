@@ -1,145 +1,170 @@
 'use client'
 
-import { useState, useEffect } from "react"
 import {
-  PieChart, Pie, Cell,
+  PieChart, Pie, Cell, ResponsiveContainer,
   BarChart, Bar, XAxis, YAxis, Tooltip, Legend,
-  ResponsiveContainer
-} from "recharts"
+} from 'recharts'
 
-export default function StatistikKependudukan() {
-  const [chartHeight, setChartHeight] = useState(300)
+const jenisKelamin = [
+  { name: 'Pria', value: 1715 },
+  { name: 'Wanita', value: 1727 },
+]
+const kepemilikanKK = [
+  { name: 'Total KK', value: 1151 },
+  { name: 'KK Pria', value: 700 },
+  { name: 'KK Wanita', value: 451 },
+]
+const pendidikan = [
+  { tingkat: 'Tidak Sekolah', pria: 64, wanita: 50 },
+  { tingkat: 'Belum Tamat SD', pria: 42, wanita: 22 },
+  { tingkat: 'SD', pria: 406, wanita: 292 },
+  { tingkat: 'SLTP', pria: 85, wanita: 29 },
+  { tingkat: 'SLTA', pria: 170, wanita: 85 },
+  { tingkat: 'D1/D2', pria: 6, wanita: 2 },
+  { tingkat: 'S1', pria: 11, wanita: 6 },
+]
+const usia = [
+  { umur: '0-4', pria: 60, wanita: 53 },
+  { umur: '5-9', pria: 130, wanita: 135 },
+  { umur: '10-14', pria: 140, wanita: 141 },
+  { umur: '15-19', pria: 137, wanita: 142 },
+  { umur: '20-27', pria: 210, wanita: 215 },
+  { umur: '28-35', pria: 203, wanita: 210 },
+  { umur: '36-45', pria: 256, wanita: 263 },
+  { umur: '45+', pria: 469, wanita: 622 },
+]
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setChartHeight(250)
-      } else {
-        setChartHeight(400)
-      }
-    }
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+const colors = ['#60A5FA', '#C084FC']
 
-  const totalPenduduk = 3442
-  const totalPria = 1715
-  const totalWanita = 1727
-  const propPria = totalPria / totalPenduduk
-  const propWanita = totalWanita / totalPenduduk
-
-  const jenisKelamin = [
-    { name: "Pria", value: 1715 },
-    { name: "Wanita", value: 1727 },
-  ]
-
-  const kepemilikanKK = [
-    { name: "Jumlah Kepala Keluarga", value: 1151 },
-    { name: "Kepemilikan KK Pria", value: 700 },
-    { name: "Kepemilikan KK Wanita", value: 451 },
-  ]
-
-  const usiaTotal = [
-    { umur: "0-4", total: 113 },
-    { umur: "5-9", total: 265 },
-    { umur: "10-14", total: 281 },
-    { umur: "15-19", total: 279 },
-    { umur: "20-27", total: 425 },
-    { umur: "28-35", total: 413 },
-    { umur: "36-45", total: 519 },
-    { umur: "45+", total: 1091 },
-  ]
-
-  const usia = usiaTotal.map(({ umur, total }) => ({
-    umur,
-    pria: Math.round(total * propPria),
-    wanita: Math.round(total * propWanita),
-  }))
-
-  const pendidikan = [
-    { tingkat: "Tidak Sekolah", pria: 64, wanita: 50 },
-    { tingkat: "Belum Tamat SD", pria: 42, wanita: 22 },
-    { tingkat: "SD", pria: 406, wanita: 292 },
-    { tingkat: "SLTP", pria: 85, wanita: 29 },
-    { tingkat: "SLTA", pria: 170, wanita: 85 },
-    { tingkat: "D1/D2", pria: 6, wanita: 2 },
-    { tingkat: "S1", pria: 11, wanita: 6 },
-    { tingkat: "S2", pria: 0, wanita: 0 },
-  ]
-
-  const colors = ["#3b82f6", "#ec4899"]
-
+export default function DashboardKependudukan() {
   return (
-    <section className="bg-desa.dark text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-desa.gold mb-10 text-center">
-          Statistik Kependudukan
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+    <main
+      className="relative min-h-screen text-white bg-cover bg-center"
+      style={{ backgroundImage: "url('/assets/photos/letak/bodeh.jpg')" }}
+    >
+      {/* Overlay: blur + gelap */}
+      <div className="absolute inset-0 bg-black/90 z-0" />
 
-          {/* Pie Jenis Kelamin */}
-          <div className="bg-desa.gray rounded-xl p-4 shadow-lg">
-            <h3 className="text-desa.gold text-center mb-4">Berdasarkan Jenis Kelamin</h3>
-            <ResponsiveContainer width="100%" height={chartHeight}>
+      {/* Konten utama */}
+      <div className="relative z-10 p-4 md:p-8">
+        <h1 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#f6f5f4]">
+          Dashboard Kependudukan Desa Guwo
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Total Penduduk */}
+          <Card title="Total Penduduk">
+            <ResponsiveContainer width="100%" height={180}>
               <PieChart>
-                <Pie data={jenisKelamin} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={chartHeight / 3}>
-                  {jenisKelamin.map((_, index) => (
-                    <Cell key={index} fill={colors[index % colors.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
+                <Pie
+                  data={[{ name: 'Penduduk', value: 3442 }]}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={50}
+                  outerRadius={70}
+                  fill="#facc15"
+                  label
+                />
+                <Tooltip
+                  contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: 'white' }}
+                  itemStyle={{ color: 'white' }}
+                  labelStyle={{ color: 'white' }}
+                />
               </PieChart>
             </ResponsiveContainer>
-          </div>
+            <p className="text-center text-xl font-bold mt-2">3.442</p>
+            <p className="text-xs text-gray-400 mt-1 text-center">Update: 2025</p>
+          </Card>
 
-          {/* Bar KK */}
-          <div className="bg-desa.gray rounded-xl p-4 shadow-lg">
-            <h3 className="text-desa.gold text-center mb-4">Kepemilikan Kartu Keluarga</h3>
-            <ResponsiveContainer width="100%" height={chartHeight}>
+          {/* Jenis Kelamin */}
+          <Card title="Proporsi Jenis Kelamin">
+            <ResponsiveContainer width="100%" height={180}>
+              <PieChart>
+                <Pie
+                  data={jenisKelamin}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={60}
+                  dataKey="value"
+                  nameKey="name"
+                >
+                  {jenisKelamin.map((_, i) => (
+                    <Cell key={i} fill={colors[i]} />
+                  ))}
+                </Pie>
+                <Tooltip
+                  formatter={(value, name) => [`${value}`, name]}
+                  contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: 'white' }}
+                  itemStyle={{ color: 'white' }}
+                  labelStyle={{ color: 'white' }}
+                />
+                <Legend iconType="circle" wrapperStyle={{ fontSize: 12 }} />
+              </PieChart>
+            </ResponsiveContainer>
+            <p className="text-xs text-gray-400 mt-1 text-center">Update: 2025</p>
+          </Card>
+
+          {/* Kepemilikan KK */}
+          <Card title="Kepemilikan Kartu Keluarga">
+            <ResponsiveContainer width="100%" height={180}>
               <BarChart data={kepemilikanKK}>
-                <XAxis dataKey="name" tick={{ fontSize: 10 }} />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="value" fill="#facc15" />
+                <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#cbd5e1' }} />
+                <YAxis tick={{ fill: '#cbd5e1' }} />
+                <Tooltip
+                  contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: 'white' }}
+                />
+                <Bar dataKey="value" fill="#facc15" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
-          </div>
+            <p className="text-xs text-gray-400 mt-1 text-center">Update: 2020</p>
+          </Card>
 
-          {/* Bar Usia */}
-          <div className="bg-desa.gray rounded-xl p-4 shadow-lg col-span-2">
-            <h3 className="text-desa.gold text-center mb-4">Distribusi Usia</h3>
-            <ResponsiveContainer width="100%" height={chartHeight}>
+          {/* Distribusi Usia */}
+          <Card title="Distribusi Usia" className="md:col-span-2">
+            <ResponsiveContainer width="100%" height={250}>
               <BarChart data={usia}>
-                <XAxis dataKey="umur" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="pria" fill="#3b82f6" />
-                <Bar dataKey="wanita" fill="#ec4899" />
+                <XAxis dataKey="umur" tick={{ fill: '#cbd5e1' }} />
+                <YAxis tick={{ fill: '#cbd5e1' }} />
+                <Tooltip
+                  contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: 'white' }}
+                />
+                <Legend iconType="circle" wrapperStyle={{ fontSize: 12 }} />
+                <Bar dataKey="pria" fill={colors[0]} radius={[4, 4, 0, 0]} />
+                <Bar dataKey="wanita" fill={colors[1]} radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
-          </div>
+            <p className="text-xs text-gray-400 mt-1 text-center">Update: 2025</p>
+          </Card>
 
-          {/* Bar Pendidikan */}
-          <div className="bg-desa.gray rounded-xl p-4 shadow-lg col-span-2">
-            <h3 className="text-desa.gold text-center mb-4">Tingkat Pendidikan</h3>
-            <ResponsiveContainer width="100%" height={chartHeight}>
+          {/* Pendidikan */}
+          <Card title="Tingkat Pendidikan" className="md:col-span-2">
+            <ResponsiveContainer width="100%" height={280}>
               <BarChart data={pendidikan} layout="vertical">
-                <XAxis type="number" />
-                <YAxis dataKey="tingkat" type="category" width={100} />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="pria" fill="#3b82f6" />
-                <Bar dataKey="wanita" fill="#ec4899" />
+                <XAxis type="number" tick={{ fill: '#cbd5e1' }} />
+                <YAxis dataKey="tingkat" type="category" width={100} tick={{ fill: '#cbd5e1' }} />
+                <Tooltip
+                  contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: 'white' }}
+                />
+                <Legend iconType="circle" wrapperStyle={{ fontSize: 12 }} />
+                <Bar dataKey="pria" fill={colors[0]} radius={[0, 4, 4, 0]} />
+                <Bar dataKey="wanita" fill={colors[1]} radius={[0, 4, 4, 0]} />
               </BarChart>
             </ResponsiveContainer>
-          </div>
-
+            <p className="text-xs text-gray-400 mt-1 text-center">Update: 2020</p>
+          </Card>
         </div>
       </div>
-    </section>
+    </main>
+  )
+}
+
+function Card({ title, children, className = '' }) {
+  return (
+    <div className={`bg-[#1e293b] p-4 rounded-xl shadow-md ${className}`}>
+      <h2 className="text-lg font-semibold mb-3 text-white">{title}</h2>
+      {children}
+    </div>
   )
 }

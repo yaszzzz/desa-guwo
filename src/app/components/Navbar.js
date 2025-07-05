@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
@@ -22,7 +23,8 @@ export default function Navbar() {
     <header className="w-full fixed top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-3">
+          <Link href={"/#"}>
+             <div className="flex items-center space-x-3">
             <img
               src="/logo.png"
               alt="Logo Desa Guwo"
@@ -32,6 +34,8 @@ export default function Navbar() {
               Desa Guwo
             </span>
           </div>
+          </Link>
+         
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8 items-center">

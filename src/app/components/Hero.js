@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 
 const images = [
-  '/assets/photos/hero/foto1.jpg',
-  '/assets/photos/membuat lapangan/WhatsApp Image 2025-06-29 at 22.10.43_347e.jpg',
-  '/assets/photos/membuat lapangan/WhatsApp Image 2025-06-29 at 22.10.44_a9e7.jpg',
+  '/assets/photos/hero/foto4.jpg',
+  '/assets/photos/hero/foto3.jpg',
+  '/assets/photos/letak/balai-desa.jpg',
   // tambahkan foto lain di sini
 ]
 

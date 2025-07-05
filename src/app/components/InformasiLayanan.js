@@ -17,7 +17,7 @@ const konten = {
   Keagamaan: {
     title: "Keagamaan",
     desc: "Sarana ibadah dan kegiatan keagamaan di desa.",
-    links: ["Masjid / Mushola", "Kegiatan Keagamaan"],
+    links: [ "Kegiatan Keagamaan"],
   },
   "Administrasi Surat": {
     title: "Administrasi Surat",
@@ -78,7 +78,7 @@ export default function InformasiLayanan() {
       <div
         className="absolute inset-0 bg-cover bg-center brightness-[0.3] z-0"
         style={{
-          backgroundImage: "url('/assets/images/bandung.jpg')",
+          backgroundImage: "url('/assets/photos/hero/foto4.jpg')",
         }}
       />
       <div className="absolute inset-0 bg-black/70 z-0" />

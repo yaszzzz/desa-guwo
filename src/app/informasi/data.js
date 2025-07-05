@@ -53,13 +53,6 @@ const informasiLayananList = [
     image: "/assets/informasi/keagamaan.jpg",
     children: [
       {
-        slug: "masjid-mushola",
-        title: "Masjid / Mushola",
-        desc: "Tempat ibadah umat muslim yang terawat dan nyaman.",
-        image: "/assets/informasi/masjid.jpg",
-        content: "Masjid dan mushola desa rutin digunakan untuk shalat berjamaah dan kegiatan pengajian.",
-      },
-      {
         slug: "kegiatan-keagamaan",
         title: "Kegiatan Keagamaan",
         desc: "Berbagai acara keagamaan di tingkat dusun dan desa.",
