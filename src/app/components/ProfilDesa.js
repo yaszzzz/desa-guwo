@@ -8,7 +8,7 @@ export default function ProfilDesa() {
     {
       title: 'Letak Geografis',
       icon: '🗺️',
-      desc: 'Terletak di Kabupaten Boyolali, Desa Guwo berada di wilayah dataran rendah dengan akses jalan yang baik.',
+      desc: 'Desa Guwo terletak di dataran rendah Kabupaten Boyolali, Provinsi Jawa Tengah, dan secara administratif masuk wilayah Kecamatan Wonosegoro.',
       page: '/page/Letak-Geografis',
     },
     {

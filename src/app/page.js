@@ -53,6 +53,11 @@ export default function Home() {
       <section>
         <BeritaKegiatan />
       </section>
+
+      <section id='footer'>
+        
+      </section>
+      
     </>
   )
 }

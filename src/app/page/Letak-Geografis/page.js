@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const maps = [
-  'https://images.unsplash.com/photo-1581091870622-2c5d8b9fc3ab', // contoh peta
-  'https://images.unsplash.com/photo-1524088480560-1640f1129c60',
+  '/assets/photos/letak geografis page/Screenshot 2025-07-05 152527.png', // contoh peta
+  '/assets/photos/letak geografis page/Screenshot 2025-07-05 153122.png',
 ]
 
 export default function LetakGeografis() {
@@ -29,15 +29,16 @@ export default function LetakGeografis() {
         <div className="relative w-full h-[250px] md:h-[350px] mb-10 overflow-hidden rounded-xl shadow-lg">
           <AnimatePresence>
             <motion.img
-              key={maps[index]}
-              src={`${maps[index]}?w=800&q=80&auto=format`}
-              alt={`Peta ${index + 1}`}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute w-full h-full object-cover rounded-xl"
-            />
+  key={maps[index]}
+  src={`${maps[index]}?w=800&q=80&auto=format`}
+  alt={`Peta ${index + 1}`}
+  initial={{ opacity: 0, scale: 1.05 }}
+  animate={{ opacity: 1, scale: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 1 }}
+  className="absolute w-full h-full object-contain rounded-xl bg-black"
+/>
+
           </AnimatePresence>
         </div>
        
@@ -47,15 +48,18 @@ export default function LetakGeografis() {
           <br></br>
         </article>
       </div>
-       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23700.083979585954!2d110.7011423966519!3d-7.272440086945537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70a01ea1537ad9%3A0x261f794a70317583!2sGuwo%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1748504947565!5m2!1sid!2sid"
-        width="100%"
-        height="200"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
+<div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg mt-6">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23700.083979585954!2d110.7011423966519!3d-7.272440086945537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70a01ea1537ad9%3A0x261f794a70317583!2sGuwo%2C%20Kec.%20Kemusu%2C%20Kabupaten%20Boyolali%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1748504947565!5m2!1sid!2sid"
+    width="100%"
+    height="250"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
+
     </section>
   )
 }
