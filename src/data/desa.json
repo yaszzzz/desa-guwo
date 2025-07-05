@@ -1,0 +1,24 @@
+
+{
+  "nama_desa": "Desa Makmur Jaya",
+  "kepala_desa": "Bapak Budi Santoso",
+  "lokasi": {
+    "kecamatan": "Caringin",
+    "kabupaten": "Bogor",
+    "provinsi": "Jawa Barat"
+  },
+  "kontak": {
+    "telepon_kantor": "0251-123456",
+    "email": "info@makmurjaya.desa.id"
+  },
+  "layanan_publik": [
+    { "nama": "Puskesmas Pembantu", "jam_buka": "08:00 - 14:00" },
+    { "nama": "Kantor Desa", "jam_buka": "08:00 - 15:00" },
+    { "nama": "Perpustakaan Desa", "jam_buka": "09:00 - 12:00" }
+  ],
+  "umkm_unggulan": [
+    { "nama": "Keripik Singkong 'Renyah'", "pemilik": "Ibu Siti" },
+    { "nama": "Batik Tulis 'Jaya'", "pemilik": "Bapak Heru" }
+  ],
+  "pengumuman_terbaru": "Akan diadakan kerja bakti pembersihan selokan pada hari Minggu, 28 Juli 2024. Warga diharapkan berkumpul di balai desa jam 07:00 pagi."
+}

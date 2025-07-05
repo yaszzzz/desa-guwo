@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MusicPlayer from "./components/checkbox";
+import Chatbot from "./components/Chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,9 @@ export default function RootLayout({ children }) {
       >
         {children}
         <Navbar />
-      <Footer />
-      <MusicPlayer />
+        <Footer />
+        <Chatbot />
+        <MusicPlayer />
       </body>
     </html>
   );
