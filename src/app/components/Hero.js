@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const images = [
-  '/assets/photos/hero/foto3.jpg',
-  '/assets/photos/hero/foto4.jpg',
-  '/assets/photos/letak/bodeh.jpg',
+  "/assets/photos/hero/foto3.jpg",
+  "/assets/photos/hero/foto4.jpg",
+  "/assets/photos/letak/bodeh.jpg",
   // tambahkan foto lain di sini
-]
+];
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length)
-    }, 5000) // ganti foto tiap 5 detik
-    return () => clearInterval(interval)
-  }, [])
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000); // ganti foto tiap 5 detik
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <header className="relative h-screen text-white pt-24 overflow-hidden">
@@ -50,15 +50,19 @@ export default function Hero() {
           Desa Guwo, Harmoni Alam & Budaya
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl text-gray-200 drop-shadow">
-          Menyambut masa depan dengan semangat kebersamaan, menjaga kearifan lokal, dan membuka diri terhadap perubahan.
+          Menyambut masa depan dengan semangat kebersamaan, menjaga kearifan
+          lokal, dan membuka diri terhadap perubahan.
         </p>
         <Link
           href="#profil"
+          onClick={() => {
+            window.dispatchEvent(new Event("playMusic"));
+          }}
           className="bg-desa.gold px-6 py-3 rounded-full font-semibold shadow hover:dark:bg-yellow-800 transition outline-2"
         >
           Lihat Informasi Desa
         </Link>
       </motion.div>
     </header>
-  )
+  );
 }
