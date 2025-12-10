@@ -1,120 +1,77 @@
-# Potensi Desa Guwo – Next.js Page
+🌾 Potensi Desa Guwo – Informasi Desa Berbasis Web
 
-Project ini berisi sebuah halaman React/Next.js yang menampilkan informasi lengkap mengenai potensi dan kondisi sosial Desa Guwo. Halaman dibuat menggunakan **Next.js (App Router)**, **Tailwind CSS**, dan **Framer Motion** untuk animasi.
+Project ini merupakan halaman web berbasis React/Next.js yang menyajikan informasi mengenai potensi serta kondisi sosial Desa Guwo. Website ini dibuat sebagai media informasi digital untuk membantu masyarakat dan pihak desa dalam memperkenalkan potensi wilayah secara online.
 
-## 🚀 Fitur Utama
+Halaman dikembangkan menggunakan Next.js (App Router), Tailwind CSS, dan Framer Motion untuk memberikan tampilan yang modern, responsif, dan interaktif.
 
-- **Carousel Gambar** otomatis dengan animasi halus menggunakan Framer Motion.
-- **Grid Potensi Desa** berisi highlight sektor pertanian, peternakan, UMKM, budaya, dan wisata.
-- **Deskripsi lengkap** mengenai kondisi geografis, sosial kemasyarakatan, dan potensi desa.
-- **Design responsif** dan cocok dengan tema dark mode.
-- **Animasi on-scroll** (fade & slide) untuk pengalaman pengguna yang lebih interaktif.
+🚀 Fitur Utama
 
-## 🛠️ Teknologi yang Digunakan
+Carousel gambar otomatis dengan animasi halus
 
-- **Next.js 14+ (App Router)**
-- **React 18**
-- **Tailwind CSS**
-- **Framer Motion**
+Grid potensi desa (pertanian, peternakan, UMKM, budaya, dan wisata)
 
+Informasi detail kondisi geografis dan sosial desa
 
-## 📁 Struktur Folder
+Desain responsif (support dark mode)
 
-```
+Animasi saat scroll untuk pengalaman pengguna yang lebih baik
+
+🛠️ Teknologi yang Digunakan
+
+Next.js (App Router)
+
+React 18
+
+Tailwind CSS
+
+Framer Motion
+
+📁 Struktur Folder
 project-folder/
 │
 ├── app/
 │   ├── potensi/
-│   │   └── page.jsx        # File halaman Potensi Desa Guwo
+│   │   └── page.jsx
 │   └── layout.jsx
 │
-├── public/                 # (opsional) gambar atau aset tambahan
+├── public/
 ├── styles/
-│   └── globals.css         # Konfigurasi Tailwind
+│   └── globals.css
 │
 ├── package.json
-└── README.md               # Dokumentasi proyek
-```
+└── README.md
 
-## 📦 Instalasi & Menjalankan Project
-
-1. **Clone repository**
-
-```bash
+📦 Instalasi & Menjalankan Project
 git clone https://github.com/username/nama-repo.git
 cd nama-repo
-```
-
-2. **Install dependencies**
-
-```bash
 npm install
-```
-
-3. **Jalankan development server**
-
-```bash
 npm run dev
-```
 
-4. Buka di browser:
 
-```
+Buka di browser:
+
 http://localhost:3000/potensi
-```
 
----
+✨ Pengelolaan Konten
 
-## ✨ Cara Mengganti Konten
-Semua konten utama ada di file:
-```
+Seluruh konten halaman dapat diubah melalui file:
+
 app/potensi/page.jsx
-```
-Bagian yang bisa kamu edit:
 
-### 1. **Carousel Gambar**
-```js
-const carouselImages = [
-  'https://...'
-]
-```
 
-### 2. **List Potensi Desa**
-```js
-const potensi = [
-  { title: 'Pertanian', icon: '🌾', desc: '...' },
-]
-```
+Bagian yang dapat disesuaikan:
 
-### 3. **Paragraf Deskripsi Desa**
-Ada di bagian:
-```jsx
-<article className="prose ...">
-  <p> ... </p>
-</article>
-```
+Gambar carousel
 
----
+Data potensi desa
 
-## 🧩 Customisasi Theme
-Project menggunakan warna custom seperti:
-```
-bg-desa.dark
-bg-desa.gray
-text-desa.gold
-```
-Pastikan sudah menambahkan theme ini di `tailwind.config.js`.
+Paragraf deskripsi
 
----
+🤝 Kontribusi
 
-## 🤝 Kontribusi
-Pull request sangat diterima! Jika ingin menambah halaman desa lain atau fitur baru, silakan buat branch baru dan ajukan PR.
+Project ini bersifat terbuka untuk pengembangan lebih lanjut dan dapat digunakan oleh pihak desa sebagai media informasi resmi.
+Kontribusi teknis tetap terbuka melalui pull request.
 
----
+📄 Lisensi
 
-## 📄 Lisensi
-Proyek ini dirilis dengan lisensi **MIT License**.
-
----
-
-Jika kamu ingin dibuatkan **logo desa**, **preview gambar untuk GitHub**, atau **deployment ke Vercel**, tinggal bilang saja! 🚀
+Project ini menggunakan MIT License dan telah diserahkan untuk digunakan oleh pihak Desa Guwo.
