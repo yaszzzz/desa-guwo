@@ -31,12 +31,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      
+
       {/* Tambahkan id untuk scroll target */}
       <section id="profil">
         <ProfilDesa />
       </section>
-      
+
       <section id="Statistik">
         <StatistikKependudukan />
       </section>
@@ -56,11 +56,6 @@ export default function Home() {
       <section>
         <BeritaKegiatan />
       </section>
-      
-      <section id='footer'>
-        
-      </section>
-      
     </>
   )
 }

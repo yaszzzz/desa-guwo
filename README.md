@@ -1,77 +1,92 @@
-🌾 Potensi Desa Guwo – Informasi Desa Berbasis Web
+# 🌾 Desa Guwo – Harmoni Alam & Budaya
 
-Project ini merupakan halaman web berbasis React/Next.js yang menyajikan informasi mengenai potensi serta kondisi sosial Desa Guwo. Website ini dibuat sebagai media informasi digital untuk membantu masyarakat dan pihak desa dalam memperkenalkan potensi wilayah secara online.
+Website profil resmi Desa Guwo, sebuah platform informasi digital yang menyajikan potensi, kekayaan budaya, dan kehidupan sosial masyarakat Desa Guwo.
 
-Halaman dikembangkan menggunakan Next.js (App Router), Tailwind CSS, dan Framer Motion untuk memberikan tampilan yang modern, responsif, dan interaktif.
+![Desa Guwo Banner](/public/assets/photos/hero/foto3.jpg)
 
-🚀 Fitur Utama
+## 🌟 Fitur Utama
 
-Carousel gambar otomatis dengan animasi halus
+- **Premium UI/UX**: Desain modern dengan sentuhan glassmorphism, tipografi elegan, dan palet warna emas (Gold) yang mewah.
+- **Responsif & Interaktif**: Tampilan optimal di semua perangkat (Mobile, Tablet, Desktop) dengan animasi yang halus (Framer Motion).
+- **Informasi Lengkap**:
+    - **Profil Desa**: Sejarah, visi misi, dan demografi.
+    - **Layanan Publik**: Informasi administrasi dan pelayanan warga.
+    - **Potensi Desa**: Galeri UMKM, pertanian, dan pariwisata.
+- **Dark Mode Support**: Kenyamanan visual dengan mode gelap yang terintegrasi.
 
-Grid potensi desa (pertanian, peternakan, UMKM, budaya, dan wisata)
+## 🛠️ Teknologi
 
-Informasi detail kondisi geografis dan sosial desa
+Project ini dibangun menggunakan teknologi web modern untuk performa dan skalabilitas tinggi:
 
-Desain responsif (support dark mode)
+- **[Next.js 15](https://nextjs.org/)**: React Framework untuk Production (App Router).
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: Utility-first CSS framework untuk styling cepat dan konsisten.
+- **[Framer Motion](https://www.framer.com/motion/)**: Library animasi untuk React.
+- **[Lucide React](https://lucide.dev/)**: Ikon vektor yang ringan dan konsisten.
 
-Animasi saat scroll untuk pengalaman pengguna yang lebih baik
+## 🚀 Memulai (Getting Started)
 
-🛠️ Teknologi yang Digunakan
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal Anda.
 
-Next.js (App Router)
+### Prasyarat
 
-React 18
+- Node.js (versi 18 atau lebih baru)
+- npm atau yarn
 
-Tailwind CSS
+### Instalasi
 
-Framer Motion
+1.  **Clone repository ini**
+    ```bash
+    git clone https://github.com/username/desa-guwo.git
+    cd desa-guwo
+    ```
 
-📁 Struktur Folder
-project-folder/
-│
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # atau
+    yarn install
+    ```
+
+3.  **Jalankan development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+## 📁 Struktur Project
+
+```plaintext
+src/
 ├── app/
-│   ├── potensi/
-│   │   └── page.jsx
-│   └── layout.jsx
-│
-├── public/
-├── styles/
-│   └── globals.css
-│
-├── package.json
-└── README.md
+│   ├── components/    # Komponen UI (Navbar, Hero, Footer, dll)
+│   ├── layout.js      # Layout utama (termasuk font & global providers)
+│   ├── page.js        # Halaman Beranda
+│   └── globals.css    # Global styles & Tailwind import
+├── public/            # Aset statis (gambar, logo)
+└── ...
+```
 
-📦 Instalasi & Menjalankan Project
-git clone https://github.com/username/nama-repo.git
-cd nama-repo
-npm install
-npm run dev
+## 🎨 Design System
 
+- **Primary Color**: `desa-gold` (#D4AF37) - Melambangkan kemakmuran dan kualitas.
+- **Background**: `desa-dark` (#0B0F19) - Memberikan kesan elegan dan fokus pada konten.
+- **Font**: Geist Sans & Geist Mono (Modern & Legible).
 
-Buka di browser:
+## 🤝 Kontribusi
 
-http://localhost:3000/potensi
+Kami sangat terbuka untuk kontribusi! Jika Anda ingin memperbaiki bug atau menambahkan fitur baru:
 
-✨ Pengelolaan Konten
+1.  Fork repository ini.
+2.  Buat branch fitur baru (`git checkout -b fitur-keren`).
+3.  Commit perubahan Anda (`git commit -m 'Menambahkan fitur keren'`).
+4.  Push ke branch (`git push origin fitur-keren`).
+5.  Buat Pull Request.
 
-Seluruh konten halaman dapat diubah melalui file:
+## 📄 Lisensi
 
-app/potensi/page.jsx
+Project ini dilisensikan di bawah [MIT License](LICENSE).
 
+---
 
-Bagian yang dapat disesuaikan:
-
-Gambar carousel
-
-Data potensi desa
-
-Paragraf deskripsi
-
-🤝 Kontribusi
-
-Project ini bersifat terbuka untuk pengembangan lebih lanjut dan dapat digunakan oleh pihak desa sebagai media informasi resmi.
-Kontribusi teknis tetap terbuka melalui pull request.
-
-📄 Lisensi
-
-Project ini menggunakan MIT License dan telah diserahkan untuk digunakan oleh pihak Desa Guwo.
+&copy; 2024 Pemerintah Desa Guwo. Dibuat dengan ❤️ untuk kemajuan desa.
