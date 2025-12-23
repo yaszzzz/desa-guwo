@@ -2,8 +2,9 @@
 import { notFound } from 'next/navigation'
 import kegiatan from '../data'
 
-export default function DetailKegiatan({ params }) {
-  const data = kegiatan.find((item) => item.slug === params.slug)
+export default async function DetailKegiatan({ params }) {
+  const resolvedParams = await params;
+  const data = kegiatan.find((item) => item.slug === resolvedParams.slug)
 
   if (!data) return notFound()
 

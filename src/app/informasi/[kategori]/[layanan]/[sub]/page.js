@@ -3,8 +3,8 @@
 import informasiLayananList from "@/app/informasi/data";
 import { notFound } from "next/navigation";
 
-export default function DetailSub({ params }) {
-  const { kategori, layanan, sub } = params;
+export default async function DetailSub({ params }) {
+  const { kategori, layanan, sub } = await params;
 
   // cari data kategori
   const kategoriData = informasiLayananList.find(

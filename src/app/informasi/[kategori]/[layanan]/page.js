@@ -1,12 +1,15 @@
 
 
+'use client';
+
+import { use } from 'react';
 import informasiLayananList from "@/app/informasi/data";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function DetailLayanan({ params }) {
-  const { kategori, layanan } = params;
+  const { kategori, layanan } = use(params);
 
   // cari data
   const kategoriData = informasiLayananList.find(
