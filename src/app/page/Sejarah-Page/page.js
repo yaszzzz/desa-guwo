@@ -20,31 +20,51 @@ export default function SejarahDesa() {
   }, []);
 
   return (
-    <section className="bg-desa.dark text-white py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold text-desa.gold mb-10 text-center">
-          Sejarah Singkat Desa Guwo
-        </h1>
+    <section className="bg-desa-dark text-white min-h-screen pt-32 pb-20 px-6 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-20 right-20 w-80 h-80 bg-red-900/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-desa-gold/5 rounded-full blur-[80px] pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-desa-gold to-orange-200">
+            Sejarah Desa Guwo
+          </h1>
+          <p className="text-gray-400 text-lg">Jejak Warisan & Perkembangan</p>
+          <div className="h-1 w-20 bg-desa-gold mx-auto mt-6 rounded-full" />
+        </motion.div>
 
         {/* Image Carousel */}
-        <div className="relative w-full h-[250px] md:h-[350px] mb-10 overflow-hidden rounded-xl shadow-lg">
-          <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative w-full h-[250px] md:h-[400px] mb-12 overflow-hidden rounded-3xl shadow-2xl border border-white/10"
+        >
+          <AnimatePresence mode="wait">
             <motion.img
               key={photos[index]}
-              src={`${photos[index]}?w=800&q=80&auto=format`}
+              src={`${photos[index]}?w=1200&q=80&auto=format`}
               alt={`Foto ${index + 1}`}
-              initial={{ opacity: 0, scale: 1.05 }}
+              initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="absolute w-full h-full object-cover rounded-xl"
+              transition={{ duration: 1.5 }}
+              className="absolute w-full h-full object-cover"
             />
           </AnimatePresence>
-        </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-desa-dark/60 via-transparent to-transparent" />
+        </motion.div>
 
         {/* Artikel */}
-        <article className="prose prose-invert prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-300">
-          <p>
+        <article className="prose prose-invert prose-lg max-w-none text-gray-300 leading-relaxed bg-white/5 backdrop-blur-sm p-8 md:p-12 rounded-3xl border border-white/5 shadow-xl">
+          <span className="text-5xl font-serif text-desa-gold float-left mr-4 -mt-2 opacity-50">“</span>
+          <p className="first-letter:text-3xl first-letter:font-bold first-letter:text-white">
             Desa Guwo merupakan salah satu desa kecil yang berada di Kabupaten
             Boyolali. Letaknya yang strategis di dataran rendah menjadikannya
             sebagai wilayah agraris yang subur dan produktif, dengan sawah dan
@@ -52,7 +72,7 @@ export default function SejarahDesa() {
           </p>
 
           <p>
-            Nama Guwo berasal dari kata guwo dalam bahasa Jawa yang berarti gua
+            Nama <span className="text-desa-gold font-semibold">"Guwo"</span> berasal dari kata guwo dalam bahasa Jawa yang berarti gua
             atau tempat berlindung. Menurut cerita turun-temurun, masyarakat
             dahulu memanfaatkan gua-gua alami di sekitar desa sebagai tempat
             persembunyian dari ancaman penjajah dan konflik antar wilayah pada
@@ -77,7 +97,9 @@ export default function SejarahDesa() {
             mandiri dan berdaya.
           </p>
 
-          <p>
+          <div className="h-px w-full bg-white/10 my-8" />
+
+          <p className="font-semibold text-white">
             Saat ini, Desa Guwo dikenal sebagai desa yang tenang, bersih, dan
             memiliki potensi pertanian serta ekonomi lokal seperti UMKM. Tradisi
             seperti kenduri, pertunjukan seni rakyat, dan kegiatan sosial

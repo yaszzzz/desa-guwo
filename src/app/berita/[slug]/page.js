@@ -8,12 +8,12 @@ export default function DetailKegiatan({ params }) {
   if (!data) return notFound()
 
   return (
-    <section className="bg-desa.dark text-white min-h-screen py-16 px-6">
+    <section className="bg-desa-dark text-white min-h-screen py-16 px-6">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-desa.gold mb-4 text-center pt-7">{data.title}</h1>
+        <h1 className="text-3xl font-bold text-desa-gold mb-4 text-center pt-7">{data.title}</h1>
         <p className="text-sm text-gray-400 text-center mb-8">{data.date}</p>
-        <div className='relative w-full h-[250px] md:h-[350px] mb-10 overflow-hidden rounded-xl shadow-lg'>
-        <img src={data.img} alt={data.title} className="rounded-xl object-cover w-full h-full mb-6" />
+        <div className="relative w-full h-[250px] md:h-[350px] mb-10 overflow-hidden rounded-xl shadow-lg">
+          <img src={data.img} alt={data.title} className="rounded-xl object-cover w-full h-full mb-6" />
         </div>
         <p className="text-lg text-gray-200 leading-relaxed">{data.content}</p>
       </div>

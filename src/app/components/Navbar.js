@@ -21,9 +21,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${scrolled
-          ? "bg-white/90 dark:bg-black/70 backdrop-blur-lg shadow-lg py-2"
-          : "bg-transparent py-4"
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-in-out ${scrolled
+        ? "bg-white/90 dark:bg-black/70 backdrop-blur-lg shadow-lg py-2"
+        : "bg-transparent py-4"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -52,7 +52,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-full text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-white/10 transition"
+            className="md:hidden p-2 rounded-full text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-white/10 transition z-[101]"
             onClick={toggleMenu}
             aria-label="Toggle Menu"
           >
@@ -63,14 +63,14 @@ export default function Navbar() {
 
       {/* Mobile Nav Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         onClick={toggleMenu}
       />
 
       {/* Mobile Nav Sidebar */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-3/4 max-w-sm bg-white dark:bg-desa-dark shadow-2xl transform transition-transform duration-300 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 z-[100] h-full w-3/4 max-w-sm bg-white dark:bg-desa-dark shadow-2xl transform transition-transform duration-300 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="flex flex-col h-full p-6">

@@ -60,7 +60,7 @@ export default function InformasiLayanan() {
   return (
     <section
       id="informasi"
-      className="relative text-white py-24 px-6 overflow-hidden bg-desa-dark"
+      className="relative font-sans text-white py-24 px-6 overflow-hidden bg-desa-dark"
     >
       {/* Background image + overlay */}
       <div
@@ -97,8 +97,8 @@ export default function InformasiLayanan() {
                         setSubAktif(submenu);
                       }}
                       className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 text-sm font-medium flex items-center justify-between group ${subAktif === submenu
-                          ? "bg-desa-gold text-desa-dark shadow-lg shadow-desa-gold/20"
-                          : "text-gray-300 hover:bg-white/10 hover:text-white"
+                        ? "bg-desa-gold text-desa-dark shadow-lg shadow-desa-gold/20"
+                        : "text-gray-300 hover:bg-white/10 hover:text-white"
                         }`}
                     >
                       <span>{submenu}</span>
